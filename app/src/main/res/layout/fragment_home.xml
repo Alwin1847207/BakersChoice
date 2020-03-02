@@ -2,11 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
     android:orientation="vertical">
 
+<<<<<<< HEAD
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:id="@+id/test"></Button>
+=======
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomnavigation"
                 android:layout_width="match_parent"
@@ -25,4 +33,5 @@
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
+>>>>>>> d3e0183d6b66bc41c47cd00a0f87658b59e4d8e2
 </LinearLayout>
