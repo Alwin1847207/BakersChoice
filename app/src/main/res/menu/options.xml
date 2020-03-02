@@ -9,8 +9,5 @@
         android:title="@string/bread" />
     <item
         android:id="@+id/tab3"
-        android:title="@string/snacks" />
-    <item
-        android:id="@+id/tab4"
         android:title="@string/others" />
 </menu>

@@ -35,13 +35,13 @@ public class loginActivity extends AppCompatActivity {
         FBA = FirebaseAuth.getInstance();
 
 
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(), registerActivity.class);
-//                startActivity(i);
-//            }
-//        });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), registerActivity.class);
+                startActivity(i);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
