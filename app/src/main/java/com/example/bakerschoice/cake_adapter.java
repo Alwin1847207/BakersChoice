@@ -30,8 +30,8 @@ public class cake_adapter extends RecyclerView.Adapter<cake_adapter.MyViewHolder
         public MyViewHolder(View view) {
             super(view);
 
-          //  item_name = (TextView) view.findViewById(R.id.item_name);
-           // item_prize = (TextView) view.findViewById(R.id.item_prize);
+          item_name = (TextView) view.findViewById(R.id.item_name);
+          item_prize = (TextView) view.findViewById(R.id.item_prize);
 
             view.setOnClickListener(this);
         }
@@ -47,7 +47,7 @@ public class cake_adapter extends RecyclerView.Adapter<cake_adapter.MyViewHolder
     @java.lang.Override
     public MyViewHolder onCreateViewHolder(@NonNull android.view.ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.inflate(R.layout.itemlist, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemlist, parent, false);
         return new MyViewHolder(view);
     }
 
