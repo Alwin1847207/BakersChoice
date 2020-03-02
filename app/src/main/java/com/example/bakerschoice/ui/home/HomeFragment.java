@@ -27,6 +27,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+<<<<<<< HEAD
        // final TextView textView = root.findViewById(R.id.text_home);
         final Button test=root.findViewById(R.id.test);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -41,6 +42,13 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
+=======
+   //  final TextView textView = root.findViewById(R.id.text_home);
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+     //           textView.setText(s);
+>>>>>>> d3e0183d6b66bc41c47cd00a0f87658b59e4d8e2
             }
         });
         return root;

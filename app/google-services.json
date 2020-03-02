@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "831270873722",
+    "firebase_url": "https://bakers-choice-47fb2.firebaseio.com",
+    "project_id": "bakers-choice-47fb2",
+    "storage_bucket": "bakers-choice-47fb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831270873722:android:2cd54e665ee653f347a9c3",
+        "android_client_info": {
+          "package_name": "com.example.bakerschoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831270873722-l1fk9a6uum68oi5pq8titkoj787c9jm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bakerschoice",
+            "certificate_hash": "cc1e7f071d8b064252c423226367fb25c5bf906a"
+          }
+        },
+        {
+          "client_id": "831270873722-65bp0p45gr1n61mjdt5j62crhrolamoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcLntueKrVTCd1tNU5adiHIHABNbMnlcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831270873722-65bp0p45gr1n61mjdt5j62crhrolamoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
