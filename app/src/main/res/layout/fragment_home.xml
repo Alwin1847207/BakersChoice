@@ -17,11 +17,21 @@
         app:itemTextColor="#000000"
         app:menu="@menu/options" />
 
-
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.bakerschoice.cake"
+    <LinearLayout
+        android:id="@+id/frag_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_height="685dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/fragment2"-->
+    <!--        android:name="com.example.bakerschoice.cake"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_weight="1" />-->
 </LinearLayout>
