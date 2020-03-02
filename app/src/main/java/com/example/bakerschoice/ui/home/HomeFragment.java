@@ -27,18 +27,11 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         // final TextView textView = root.findViewById(R.id.text_home);
-        final Button test = root.findViewById(R.id.test);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 // textView.setText(s);
-                test.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(getActivity(), loginActivity.class);
-                        startActivity(i);
-                    }
-                });
+
 //
 //   //  final TextView textView = root.findViewById(R.id.text_home);
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
