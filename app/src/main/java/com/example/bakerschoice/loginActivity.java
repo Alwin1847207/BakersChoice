@@ -2,6 +2,8 @@ package com.example.bakerschoice;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -33,9 +35,6 @@ public class loginActivity extends AppCompatActivity {
         login = (Button) findViewById(R.id.login);
         FBA = FirebaseAuth.getInstance();
 
-        String uname, pass;
-        uname = et1.getText().toString();
-        pass = et2.getText().toString();
 
 //        register.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -44,22 +43,34 @@ public class loginActivity extends AppCompatActivity {
 //                startActivity(i);
 //            }
 //        });
-//        login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(i);
-//            }
-//        });
 
-        FBA.signInWithEmailAndPassword(uname, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Intent i = new Intent(getApplicationContext(), registerActivity.class);
-                    startActivity(i);
-                    finish();
+            public void onClick(View v) {
+                String uname, pass;
+
+                uname = et1.getText().toString();
+                pass = et2.getText().toString();
+
+                if (TextUtils.isEmpty(uname)) {
+                    et1.setError("Username is required!");
+                    return;
                 }
+                if (TextUtils.isEmpty(pass)) {
+                    et1.setError("Password is required!");
+                    return;
+                }
+
+                FBA.signInWithEmailAndPassword(uname, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                            finish();
+                        }
+                    }
+                });
             }
         });
     }

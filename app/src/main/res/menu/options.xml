@@ -3,11 +3,14 @@
 
     <item
         android:id="@+id/tab1"
-        android:title="@string/cake"/>
+        android:title="@string/cake" />
+    <item
+        android:id="@+id/tab2"
+        android:title="@string/bread" />
     <item
         android:id="@+id/tab3"
-        android:title="@string/bread"/>
+        android:title="@string/snacks" />
     <item
-        android:id="@+id/tab6"
-        android:title="@string/others"/>
+        android:id="@+id/tab4"
+        android:title="@string/others" />
 </menu>
