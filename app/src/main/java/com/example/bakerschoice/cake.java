@@ -50,8 +50,12 @@ public class cake extends Fragment{
                 modelist.clear();
 
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    String k=dataSnapshot1.getKey();
+                    String price= dataSnapshot1.child("price").getValue(String.class);
+                    String name= dataSnapshot1.child("name").getValue(String.class);
+                    Toast.makeText(getContext(), name, Toast.LENGTH_SHORT).show();
 
-                    cake_model modl = dataSnapshot1.getValue(cake_model.class);
+                    cake_model modl=new cake_model(name,price);
                     modelist.add(modl);
                 }
 

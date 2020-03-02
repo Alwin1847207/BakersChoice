@@ -5,6 +5,7 @@ import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,8 +31,8 @@ public class cake_adapter extends RecyclerView.Adapter<cake_adapter.MyViewHolder
         public MyViewHolder(View view) {
             super(view);
 
-          item_name = (TextView) view.findViewById(R.id.item_name);
-          item_prize = (TextView) view.findViewById(R.id.item_prize);
+          item_name = (TextView) view.findViewById(R.id.item_name_list);
+          item_prize = (TextView) view.findViewById(R.id.item_prize_list);
 
             view.setOnClickListener(this);
         }
@@ -55,6 +56,8 @@ public class cake_adapter extends RecyclerView.Adapter<cake_adapter.MyViewHolder
     public void onBindViewHolder(MyViewHolder holder, int position) {
         cake_model model = modellist.get(position);
         holder.item_name.setText(model.getItem_name());
+        holder.item_prize.setText(model.getItem_prize());
+      //  Toast.makeText(ctx, model.getItem_name(), Toast.LENGTH_SHORT).show();
     }
 
     @java.lang.Override
