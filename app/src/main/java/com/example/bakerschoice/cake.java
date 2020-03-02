@@ -1,15 +1,25 @@
 package com.example.bakerschoice;
 
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -29,6 +39,32 @@ public class cake extends Fragment{
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Items").child("Cakes");
+
+        modelist = new ArrayList<cake_model>();
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                modelist.clear();
+
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+
+                    cake_model modl = dataSnapshot1.getValue(cake_model.class);
+                    modelist.add(modl);
+                }
+
+                dashboard_adapter = new cake_adapter(getActivity(), modelist);
+                recyclerView.setAdapter(dashboard_adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getContext(), "Error....!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         return view;
     }
