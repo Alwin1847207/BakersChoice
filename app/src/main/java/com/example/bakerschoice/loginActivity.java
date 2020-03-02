@@ -20,6 +20,7 @@ public class loginActivity extends AppCompatActivity {
 
     FirebaseAuth FBA;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
