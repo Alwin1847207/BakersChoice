@@ -2,28 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
 
-<<<<<<< HEAD
     <Button
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test"
-        android:id="@+id/test"></Button>
-=======
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomnavigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="0dp"
-                android:textAlignment="center"
-                android:background="#FFFFFF"
-                app:itemTextColor="#000000"
-                app:menu="@menu/options" />
+        android:text="test"></Button>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="0dp"
+        android:textAlignment="center"
+        app:itemTextColor="#000000"
+        app:menu="@menu/options" />
 
 
     <fragment
@@ -32,6 +30,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
-
->>>>>>> d3e0183d6b66bc41c47cd00a0f87658b59e4d8e2
 </LinearLayout>
